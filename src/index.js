@@ -1,6 +1,12 @@
 import express from "express";
+import "dotenv/config";
+import { connectDb } from "./config/db.js";
 import notesRoutes from"./routes/notesRoutes.js"
+connectDb()
 const app = express();
+
+
+
 
 
 app.use("/api/notes",notesRoutes)

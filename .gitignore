@@ -28,4 +28,5 @@ out/
 
 # Others
 *.bak
+.env
 *.tmp
