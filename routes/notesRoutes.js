@@ -1,10 +1,9 @@
 import express, { Router } from "express";
+import { getAllnotes } from "../controllers/notesControllers.js";
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.status(200).json({ message: "this is from get request " });
-});
+router.get("/",getAllnotes);
 router.post("/", (req, res) => {
   res.status(201).json({ message: "this is from post request " });
 });
