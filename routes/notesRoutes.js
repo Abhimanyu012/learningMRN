@@ -1,13 +1,10 @@
 import express, { Router } from "express";
-import { getAllnotes } from "../controllers/notesControllers.js";
+import { createNotes, getAllnotes, updateNotes } from "../controllers/notesControllers.js";
 
 const router = express.Router();
 
 router.get("/",getAllnotes);
-router.post("/", (req, res) => {
-  res.status(201).json({ message: "this is from post request " });
-});
-router.put("/", (req, res) => {
-  res.status(201).json({ message: "this is from put request " });
-});
+router.post("/", createNotes);
+router.put("/", updateNotes);
+
 export default router;
